@@ -1,0 +1,5 @@
+pip install
+flask
+spacy
+spacy.lang.en.stop_words
+heapq
