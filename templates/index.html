@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Textsummarizer</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./static/style.css">
@@ -13,34 +13,51 @@
 
 <body>
 
-  <div style="display: none;" id="main">
-    <div class="container ">
+  <div id="main">
+    <div style="display:none"  class="bydefoultnone">
+     <div class="container ">
       <div class="jumbotron  jumbotron-fluid">
         <div class="container">
           <h1 class="display-4 ">Text Summrization</h1>
           <p class="lead">Retrive the best summary for the text</p>
         </div>
       </div>
-    </div>
-    <form action="/analyze" method="POST" class="container">
+     </div>
+     <form action="/analyze" method="POST" class="container">
       <p>Paste here your Paragraph </p>
       <textarea name="rawtext" class="form-control" placeholder="Paste your text here..."></textarea>
       <input class="btn btn-primary" type="submit" value="Summarize">
     </form>
+
   </div>
 
-
-  <div  class="welcome_page">
-    <div class="box" style="text-align: center;">
-      <h1 class="welcome-text" style="font-size:100px;line-height: 200px;  ">WELCOME...</h1>
-      <button><div style="cursor: pointer;font-size:20px;  padding: 10px; " class="click-summary" >Click here for summary your text </div></button>
+    <div class="welcome_page">
+      <div class="box" style="text-align: center;">
+        <h1 class="welcome-text" style="color: white; width: 100vw;">SUMMARY YOUR TEXT</h1>
+        <p style="color: white;">Create Concise Summaries of Texts Instantly</p>
+        <button>
+          <div  class="click-summary">Cick here for summary your text </div>
+        </button>
+      </div>
     </div>
-  </div>
 
+    <footer>
+      <div  class="name" style="font-size: 16px;">
+        <a target="_blank" href="">@2023</a>
+        <a target="_blank" href="mailto:kuldeepmaurya4296@gmail.com">E-mail</a>
+
+      </div>
+      <div  class="about">
+        <a target="_blank" href="https://github.com/kuldeepmaurya4296"> github</a>
+        <a target="_blank" href="https://www.linkedin.com/in/kuldeepmaurya4296/">linkedin</a>
+        <a target="_blank" href="https://www.instagram.com/the_selfish7.0/">Know more.</a>
+      </div>
+    </footer>
+  </div>
   <script>
     document.querySelector(".click-summary")
       .addEventListener("click", function () {
-        document.querySelector("#main")
+        document.querySelector(".bydefoultnone")
           .style.display = "initial"
 
         document.querySelector(".welcome_page")
