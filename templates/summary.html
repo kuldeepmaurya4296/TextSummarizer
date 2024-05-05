@@ -5,46 +5,57 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Textsummarizer</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./static/style.css">
 </head>
 
 <body>
-  <div id="top" class="container">
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Text Summrization</h1>
-        <p class="lead">Retrive the best summary for the text</p>
+  <div id="main">
+    <div id="top" class="container">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4" style="font-size: 6vw;">Text Summrization</h1>
+          <p class="lead" style="font-size: 2.5vw;">Here your Text with the best created Summary by me </p>
+        </div>
       </div>
     </div>
+
+
+    <div id="bottom">
+      <div class="container">
+        <p class="title1 " >Original Text</p>
+        <p class="original-title col-sm-12" style="color: white; font-weight: 40px; font-size: 16px; text-align: justify;">{{original_txt}}</p>
+      </div>
+      
+      <div class="container">
+        <p class="title1 " >Summary</p>
+        <p class="summary-title col-sm-12" style="color: red; font-weight: 700; font-size: 16px; text-align: justify;">{{summary}}</p>
+      </div>
+
+
+      <div  class="container">
+        <p class="title1 ">{{len_org_txt}} words in your text and {{len_summary}}  &nbsp; words in summary</p>
+        <button style="padding: 10px;"><a href="/">Summary more text</a></button>
+      </div>
+    </div>
+
+    <footer>
+      <div  class="name" style="font-size: 16px;">
+        <a target="_blank" href="">@2023</a>
+        <a target="_blank" href="mailto:kuldeepmaurya4296@gmail.com">E-mail</a>
+
+      </div>
+      <div  class="about">
+        <a target="_blank" href="https://github.com/kuldeepmaurya4296"> github</a>
+        <a target="_blank" href="https://www.linkedin.com/in/kuldeepmaurya4296/">linkedin</a>
+        <a target="_blank" href="https://www.instagram.com/the_selfish7.0/">Know more.</a>
+      </div>
+    </footer>
+
+
   </div>
-
-
-<div id="bottom">
-  
-  
-  <div style="display: flex; justify-content: space-around;" class="container">
-    <p class="original-title col-sm-4" style="font-size: 30px;-webkit-text-stroke: .5px rgb(0, 252, 231);font-weight: bolder;">Original Text</p>
-    <p class="summary-title col-sm-4" style="font-size: 30px;-webkit-text-stroke: .5px red;font-weight: bolder;" >Summary</p>
-  </div>
-
-  <div style="display: flex; justify-content: space-around;"  class="container">
-    <p class="original-title col-sm-5">{{original_txt}}</p>
-    <p class="summary-title col-sm-5">{{summary}}</p>
-  </div>
-
-  
-  <div style="display: flex; justify-content: space-around;"  class="container">
-    <p  class="original-title col-sm-4">{{len_org_txt}} words in your text &nbsp;{{len_summary}} and words in summary</p>
-    <button><a href="/">Summary more text</a></button>
-  </div>
-</div>
-
-
-
-
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
